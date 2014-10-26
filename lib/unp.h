@@ -1,6 +1,9 @@
 #ifndef	__unp_h
 #define	__unp_h
 
+#include "../config.h"		/* configuration options for current OS */
+
+
 #include	<sys/types.h>	/* basic sytem data types */
 #include	<sys/socket.h>	/* basic socket definitions */
 

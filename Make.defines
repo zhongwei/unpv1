@@ -1,0 +1,21 @@
+#
+# This is the "Make.defines" file that almost every "Makefile" in the
+# source directories below this directory include.
+# The "../" in the pathnames actually refer to this directory, since
+# "make" is executed in all the subdirectories of this directory.
+#
+# System = i386-apple-darwin14.0.0
+
+CC = gcc
+CFLAGS = -I../lib -g -O2 -D_REENTRANT -Wall
+LIBS = ../libunp.a 
+RANLIB = ranlib
+
+# Following is the main library, built from all the object files
+# in the lib/ directories.
+LIBUNP_NAME = ../libunp.a
+
+# Following are all the object files to create in the lib/ directory.
+LIB_OBJS =  error.o wrapsock.o wrapunix.o
+
+CLEANFILES = *.o
